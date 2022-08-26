@@ -1,3 +1,4 @@
+import React from 'react';
 import './sign-up-form.styles.scss';
 
 import { useState } from "react";
