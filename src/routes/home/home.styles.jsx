@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
-export const CategoriesContainer = styled.div`
+export const HomeContainer = styled.div`
     margin: 0 40px;
 `

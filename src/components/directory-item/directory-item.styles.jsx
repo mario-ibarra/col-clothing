@@ -1,16 +1,16 @@
 import styled from 'styled-components';
 
+
 export const BackgroundImage = styled.div`
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-image: ${({imageUrl}) => `url(${imageUrl})`}
-`
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: ${({ imageUrl }) => `url(${imageUrl})`};
+`;
 
 export const Body = styled.div`
   height: 90px;
-  padding: 0 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,14 +36,14 @@ export const Body = styled.div`
 
 export const DirectoryItemContainer = styled.div`
   min-width: 30%;
-  height: 240px;
+  height: 300px;
   flex: 1 1 auto;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid black;
   margin: 0 7.5px 15px;
-  overflow: hidden;
+
 
   &:hover {
     cursor: pointer;
@@ -62,4 +62,4 @@ export const DirectoryItemContainer = styled.div`
     &:last-child {
       margin-right: 7.5px;
     }
-`
+`;

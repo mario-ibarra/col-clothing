@@ -1,4 +1,4 @@
-import './categories-preview.styles.jsx';
+import {CategoriesContainer} from './categories-preview.styles';
 
 import { Fragment, useContext } from 'react';
 
@@ -9,12 +9,14 @@ const CategoriesPreview = () => {
   const { categoriesMap } = useContext(CategoriesContext);
   return (
     <Fragment>
-      {Object.keys(categoriesMap).map((title) => {
-        const products = categoriesMap[title];
-        return (
-          <CategoryPreview key={title} title={title} products={products} />
-        );
-      })}
+      <CategoriesContainer>
+          {Object.keys(categoriesMap).map((title) => {
+            const products = categoriesMap[title];
+            return (
+              <CategoryPreview key={title} title={title} products={products} />
+            );
+          })}
+      </CategoriesContainer>
     </Fragment>
   );
 };
