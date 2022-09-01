@@ -1,4 +1,4 @@
-import './categories-preview.styles.scss';
+import './categories-preview.styles.jsx';
 
 import { Fragment, useContext } from 'react';
 
