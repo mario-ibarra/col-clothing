@@ -1,5 +1,6 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom';
+
 
 import Home from './routes/home/home.component';
 import Navigation from './routes/navigation/navigation.component';
@@ -8,10 +9,29 @@ import About from './routes/about/about.component';
 import Shop from './routes/shop/shop.component';
 import Checkout from './routes/checkout/checkout.component';
 import Footer from './routes/footer/footer.component';
+import { checkUserSession } from './features/user/userSlice';
+import { useDispatch, useSelector } from 'react-redux';
+// import { getCurrentUser } from './utils/firebase/firebase.utils';
+
+
+
 
 
 const App = () => {
+  
+  // const user = useSelector((state) => state.user.currentUser);
+  
+  // console.log('From App', user)
+const dispatch = useDispatch()
 
+//  useEffect(() =>{
+//     getCurrentUser().then((user)=>console.log(user))
+//  }, [dispatch])
+ useEffect(() =>{
+    dispatch(checkUserSession());
+ }, [])
+
+ 
 return (
   <Fragment>
     <Routes>

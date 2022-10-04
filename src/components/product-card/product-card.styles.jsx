@@ -1,5 +1,7 @@
-.product-card-container {
-  width: 100%;
+import styled from 'styled-components';
+
+export const ProductCardContainer = styled.div`
+   width: 100%;
   display: flex;
   flex-direction: column;
   height: 350px;
@@ -31,23 +33,18 @@
       display: flex;
     }
   }
+`;
 
-  .footer {
-    width: 100%;
-    height: 5%;
-    display: flex;
-    justify-content: space-between;
-    font-size: 18px;
+export const FooterCard = styled.div`
+  width: 100%;
+  height: 5%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
 
-    .name {
-      width: 90%;
-      margin-bottom: 15px;
-      
-    }
-
-    .price {
-      width: 15%;
-    
-    }
+  .name {
+    width: 85%;
+    margin-bottom: 15px;
   }
-}
+`;
+  
